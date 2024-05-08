@@ -46,8 +46,11 @@ jobs:
         # webkitgtk 4.0 is for Tauri v1 - webkitgtk 4.1 is for Tauri v2.
         # You can remove the one that doesn't apply to your app to speed up the workflow a bit.
 
-      - name: Install Cargo dependencies
-        run: cargo install --path .
+      - name: Install Trunk
+        uses: jetli/trunk-action@v0.5.0
+        with:
+          # Optional version of trunk to install(eg. 'v0.19.1', 'latest')
+          version: 'latest'
 
       - name: install frontend dependencies
         run: yarn install # change this to npm, pnpm or bun depending on which one you use.
