@@ -9,7 +9,7 @@ mod role;
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
-fn greet(rolelist: &str) -> String {
+fn convert(rolelist: &str) -> String {
     let mut roles = vec![];
 
     for line in rolelist.lines() {
@@ -34,7 +34,7 @@ fn greet(rolelist: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![convert])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
