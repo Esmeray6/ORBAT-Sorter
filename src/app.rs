@@ -37,7 +37,7 @@ pub fn app() -> Html {
                 })
                 .unwrap();
                 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-                let new_msg = invoke("greet", args).await.as_string().unwrap();
+                let new_msg = invoke("convert", args).await.as_string().unwrap();
                 role_msg.set(new_msg);
             });
 
@@ -45,7 +45,7 @@ pub fn app() -> Html {
         });
     }
 
-    let greet = {
+    let convert = {
         let rolelist = rolelist.clone();
         let role_input_ref = role_input_ref.clone();
         dbg!(&rolelist, &role_input_ref);
@@ -80,9 +80,9 @@ pub fn app() -> Html {
             //     <a href="https://github.com/rust-lang/rust-analyzer" target="_blank">{"rust-analyzer"}</a>
             // </p>
 
-            <form class="row" onsubmit={greet}>
-                <textarea type="text" id="greet-input" ref={role_input_ref} placeholder="Enter the list of roles..." />
-                <button class="row" id="submit-button" type="submit">{"Greet"}</button>
+            <form class="row" onsubmit={convert}>
+                <textarea type="text" id="convert-input" ref={role_input_ref} placeholder="Enter the list of roles..." />
+                <button class="row" id="submit-button" type="submit">{"Convert"}</button>
             </form>
 
             <textarea class="row" id="role-msg" value={ role_msg.to_string() }></textarea>
