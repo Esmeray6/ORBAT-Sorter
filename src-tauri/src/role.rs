@@ -24,7 +24,8 @@ pub enum Role {
     #[strum(
         serialize = "PSgt",
         serialize = "Platoon Sergeant",
-        serialize = "Platoon 2iC"
+        serialize = "Platoon 2iC",
+        serialize = "Plt 2iC"
     )]
     #[strum(ascii_case_insensitive)]
     PSgt,
