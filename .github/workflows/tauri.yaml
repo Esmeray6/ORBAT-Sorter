@@ -66,5 +66,6 @@ jobs:
         with:
           tagName: v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version.
           releaseId: ${{ github.event.release.id }}
+          releaseBody: ${{ github.event.release.body }}
           args: ${{ matrix.args }}
           includeUpdaterJson: true
