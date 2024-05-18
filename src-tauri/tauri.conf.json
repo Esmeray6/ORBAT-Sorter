@@ -7,7 +7,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "ORBAT-Sorter",
+    "productName": "ORBAT Sorter",
     "version": "0.2.1"
   },
   "tauri": {
@@ -23,10 +23,10 @@
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEUzMDc3MjNBNDcwNzY3RUIKUldUclp3ZEhPbklINC9sZDRQemQ0YUVkWUF4SDR2QTFlS0ZseXVqVXhJZC9XWTRLU2w1bmQvNTAK",
       "windows": {
-        "installMode": "basicUi",
+        "installMode": "passive",
         "installerArgs": []
       },
-      "endpoints": ["https://gist.githubusercontent.com/Esmeray6/268c9926f13e998b0ecbcd19fc165053/raw"]
+      "endpoints": ["https://github.com/Esmeray6/ORBAT-Sorter/releases/latest/download/latest.json"]
     },
     "windows": [
       {
