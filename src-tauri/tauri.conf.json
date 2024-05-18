@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "ORBAT-Sorter",
-    "version": "0.2.0"
+    "version": "0.2.1"
   },
   "tauri": {
     "allowlist": {
@@ -18,9 +18,19 @@
         "open": true
       }
     },
+    "updater": {
+      "active": true,
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEUzMDc3MjNBNDcwNzY3RUIKUldUclp3ZEhPbklINC9sZDRQemQ0YUVkWUF4SDR2QTFlS0ZseXVqVXhJZC9XWTRLU2w1bmQvNTAK",
+      "windows": {
+        "installMode": "basicUi",
+        "installerArgs": []
+      },
+      "endpoints": ["https://gist.githubusercontent.com/Esmeray6/268c9926f13e998b0ecbcd19fc165053/raw"]
+    },
     "windows": [
       {
-        "title": "orbat_sorting",
+        "title": "ORBAT Sorter 0.2.1",
         "width": 800,
         "height": 600,
         "center": true
