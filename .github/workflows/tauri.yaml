@@ -1,5 +1,10 @@
 name: 'publish'
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+  TAURI_KEY_PASSWORD: ${{ secrets.TAURI_PRIVATE_KEY }}
+
 on:
   release:
     types: [created]
@@ -62,3 +67,4 @@ jobs:
           tagName: v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version.
           releaseId: ${{ github.event.release.id }}
           args: ${{ matrix.args }}
+          includeUpdaterJson: true
